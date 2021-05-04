@@ -9,5 +9,12 @@ import kr.hs.study.dto.PortfolioDTO;
 @Component
 public class PortfolioDAO {
 
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	public void insert_data(PortfolioDTO dto) {
+		String sql = "insert into portfolio values(?, ?, ?, ?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sql, dto.getTitle(), dto.getMemberCnt(), dto.getLanguage(), dto.getIDE(), dto.getState(), dto.getDevYear(), dto.getPeriod(), dto.getAttach());
+	}
 	
 }
