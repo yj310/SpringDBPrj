@@ -10,8 +10,8 @@ public class PortfolioDTO {
 	private String language;
 	private String IDE;
 	private String state;
-	private String date;
-	private int period;
+	private int devYear;
+	private String period;
 	private String attach;
 	
 	
@@ -19,21 +19,20 @@ public class PortfolioDTO {
 	public PortfolioDTO() {
 		super();
 	}
-
-	public PortfolioDTO(String title, int memberCnt, String language, String iDE, String state, String date, int period,
-			String attach) {
+	
+	public PortfolioDTO(String title, int memberCnt, String language, String iDE, String state, int devYear,
+			String period, String attach) {
 		super();
 		this.title = title;
 		this.memberCnt = memberCnt;
 		this.language = language;
 		IDE = iDE;
 		this.state = state;
-		this.date = date;
+		this.devYear = devYear;
 		this.period = period;
 		this.attach = attach;
 	}
 
-	
 	/* getter setter */
 	public String getTitle() {
 		return title;
@@ -75,19 +74,19 @@ public class PortfolioDTO {
 		this.state = state;
 	}
 
-	public String getDate() {
-		return date;
+	public int getDevYear() {
+		return devYear;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setDevYear(int devYear) {
+		this.devYear = devYear;
 	}
 
-	public int getPeriod() {
+	public String getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(int period) {
+	public void setPeriod(String period) {
 		this.period = period;
 	}
 
@@ -98,6 +97,8 @@ public class PortfolioDTO {
 	public void setAttach(String attach) {
 		this.attach = attach;
 	}
+
+	
 
 	
 	
