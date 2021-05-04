@@ -22,4 +22,9 @@ public class PortfolioDAO {
 		jdbcTemplate.update(sql, dto.getPeriod(), dto.getTitle());
 	}
 	
+	public void delete_data(PortfolioDTO dto) {
+		String sql = "delete from portfolio where title=?";
+		jdbcTemplate.update(sql, dto.getTitle());
+	}
+	
 }

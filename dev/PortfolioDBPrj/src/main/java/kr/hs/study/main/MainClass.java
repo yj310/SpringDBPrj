@@ -30,9 +30,9 @@ public class MainClass {
 		PortfolioDAO dao = ctx.getBean("PortfolioDAO", PortfolioDAO.class);
 		//dao.insert_data(bean1);
 		
-		dao.update_data(bean2);
+		//dao.update_data(bean2);
 		
-		
+		dao.delete_data(bean1);
 		
 		System.out.println("완료");
 		ctx.close();
