@@ -23,8 +23,16 @@ public class MainClass {
 		bean1.setPeriod("2주");
 		bean1.setAttach("https://github.com/yj310/Attack_Of_Nannan");
 		
+		PortfolioDTO bean2 = ctx.getBean("PortfolioDTO", PortfolioDTO.class);
+		bean2.setTitle("난난이의 습격");
+		bean2.setPeriod("3주");
+		
 		PortfolioDAO dao = ctx.getBean("PortfolioDAO", PortfolioDAO.class);
-		dao.insert_data(bean1);
+		//dao.insert_data(bean1);
+		
+		dao.update_data(bean2);
+		
+		
 		
 		System.out.println("완료");
 		ctx.close();

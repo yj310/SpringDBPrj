@@ -17,4 +17,9 @@ public class PortfolioDAO {
 		jdbcTemplate.update(sql, dto.getTitle(), dto.getMemberCnt(), dto.getLanguage(), dto.getIDE(), dto.getState(), dto.getDevYear(), dto.getPeriod(), dto.getAttach());
 	}
 	
+	public void update_data(PortfolioDTO dto) {
+		String sql = "update portfolio set period=? where title=?";
+		jdbcTemplate.update(sql, dto.getPeriod(), dto.getTitle());
+	}
+	
 }
